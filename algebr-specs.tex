@@ -30,11 +30,11 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} setPoint : Point $\times$ Location $\rightarrow$ Location;\\
 \hspace*{5mm} getPoint : Location $\rightarrow$ Point;\\
 \noindent \textbf{Variables}:\\
-\hspace*{5mm} newDesc, desc, d: String; newPoint, p: Point;\\
+\hspace*{5mm} newDesc, d: String; newPoint, p: Point;\\
 \noindent \textbf{Axioms}:\\
-\hspace*{5mm} [A1] getDescription(newLocation(newdesc, newp)) = newdesc;\\
-\hspace*{5mm} [A2] getDescription(setDescription(newDesc, newLocation(desc,p))) = newDesc;\\
-\hspace*{5mm} [A3] getDescription(setPoint(newPoint, newLocation(desc,p))) = desc;\\
+\hspace*{5mm} [A1] getDescription(newLocation(d, p)) = d;\\
+\hspace*{5mm} [A2] getDescription(setDescription(newDesc, newLocation(d, p))) = newDesc;\\
+\hspace*{5mm} [A3] getDescription(setPoint(newPoint, newLocation(d,p))) = d;\\
 \hspace*{5mm} [A4] getPoint(newLocation(newdesc, newp)) = newp;\\
 \hspace*{5mm} [A5] getPoint(setPoint(newPoint, newLocation(desc,p))) = newPoint;\\
 \hspace*{5mm} [A6] getPoint(setDescription(newDescription, newLocation(desc,p))) = p;\\
