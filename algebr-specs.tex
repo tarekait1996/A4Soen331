@@ -19,20 +19,20 @@ Assignment 4 on algebraic specifications}
 
 \maketitle
 
-\noindent \textbf{Spec}: Set (Element);\\
-\noindent \textbf{Sort}: Set;\\
-\noindent \textbf{Imports}: Boolean, $\mathbb{N}_0$;\\
+\noindent \textbf{Spec}: Location;\\
+\noindent \textbf{Sort}: Location;\\
+\noindent \textbf{Imports}:String, Point\\
+\noindent \textbf{Description}: A location contains a description \\
 \noindent \textbf{Operations}:\\
-\hspace*{5mm} newset $\rightarrow$ Set;\\
-\hspace*{5mm} add : Set $\times$ Element $\rightarrow$ Set;\\
-\hspace*{5mm} remove : Set $\times$ Element $\rightarrow$ Set;\\
-\hspace*{5mm} size : Set $\rightarrow$ $\mathbb{N}_0$;\\
-\hspace*{5mm} isempty : Set $\rightarrow$ Boolean;\\
-\hspace*{5mm} ismember : Set $\times$ Element $\rightarrow$ Boolean;\\
+\hspace*{5mm} newLocation: String $\times$ Point $\rightarrow$ Location;\\
+\hspace*{5mm} setDescription: description $\rightarrow$ Location;\\
+\hspace*{5mm} getDescription : Location $\rightarrow$ Description;\\
+\hspace*{5mm} setPoint : Point $\rightarrow$ Location;\\
+\hspace*{5mm} getPoint : Location $\rightarrow$ Point;\\
 \noindent \textbf{Variables}:\\
-\hspace*{5mm} s: Set; x, y: Element;\\
+\hspace*{5mm} description: String; point: Point;\\
 \noindent \textbf{Axioms}:\\
-\hspace*{5mm} [A1] isempty(newset) = true;\\
+\hspace*{5mm} [A1] getDescription(newLocation(newdesc, newp) = newdesc;\\
 \hspace*{5mm} [A2] ismember(newset, x) = false;\\
 \hspace*{5mm} [A3] ismember(add(s, x), x) = true;\\
 \hspace*{5mm} [A4] add(add(s, x), y) = add(add(s, y), x);\\
