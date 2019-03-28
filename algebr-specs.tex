@@ -33,8 +33,14 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} description: String; point: Point;\\
 \noindent \textbf{Axioms}:\\
 \hspace*{5mm} [A1] getDescription(newLocation(newdesc, newp)) = newdesc;\\
-\hspace*{5mm} [A2] getPoint(newLocation(newdesc, newp)) = newp;\\
-\hspace*{5mm} [A3] setDescription(newDesc, newLocation(newdesc, newp)) = STUCK HERE;\\
+\hspace*{5mm} [A2] getDescription(setDescription(newDesc, newLocation(desc,p))) = newLocation(newDesc, p);\\
+\hspace*{5mm} [A3] getDescription(setPoint(newPoint, newLocation(desc,p))) = newLocation(desc, newPoint);\\
+\hspace*{5mm} [A4] getPoint(newLocation(newdesc, newp)) = newp;\\
+\hspace*{5mm} [A5] getPoint(setPoint(newPoint, newLocation(desc,p))) = newLocation(descesc, newPoint);\\
+\hspace*{5mm} [A6] getPoint(setDescription(newDescription, newLocation(desc,p))) = newLocation(newDesc, p);\\
+\hspace*{5mm} [A7] setDescription(newDesc, newLocation(d,p)) = newLocation(newDesc, p);\\
+\hspace*{5mm} [A8] setDescription(getDescription(newLocation(d,p)), newLocation(d,p)) = d;\\
+
 
 
 
