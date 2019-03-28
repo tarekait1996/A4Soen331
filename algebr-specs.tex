@@ -35,9 +35,9 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A1] getDescription(newLocation(d, p)) = d;\\
 \hspace*{5mm} [A2] getDescription(setDescription(newDesc, newLocation(d, p))) = newDesc;\\
 \hspace*{5mm} [A3] getDescription(setPoint(newPoint, newLocation(d,p))) = d;\\
-\hspace*{5mm} [A4] getPoint(newLocation(newdesc, newp)) = newp;\\
-\hspace*{5mm} [A5] getPoint(setPoint(newPoint, newLocation(desc,p))) = newPoint;\\
-\hspace*{5mm} [A6] getPoint(setDescription(newDescription, newLocation(desc,p))) = p;\\
+\hspace*{5mm} [A4] getPoint(newLocation(d, p)) = p;\\
+\hspace*{5mm} [A5] getPoint(setPoint(newPoint, newLocation(d,p))) = newPoint;\\
+\hspace*{5mm} [A6] getPoint(setDescription(newDesc, newLocation(d,p))) = p;\\
 \hspace*{5mm} [A7] setDescription(newDesc, newLocation(d,p)) = newLocation(newDesc, p);\\
 \hspace*{5mm} [A8] setDescription(getDescription(newLocation(d,p)), newLocation(d,p)) = newLocation(d,p);\\
 \hspace*{5mm} [A9] setPoint(newPoint, newLocation(d,p)) = newLocation(d, newPoint);\\
