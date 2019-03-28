@@ -32,9 +32,9 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Variables}:\\
 \hspace*{5mm} description: String; point: Point;\\
 \noindent \textbf{Axioms}:\\
-\hspace*{5mm} [A1] getDescription(newLocation(newdesc, newp) = newdesc;\\
-\hspace*{5mm} [A2] ismember(newset, x) = false;\\
-\hspace*{5mm} [A3] ismember(add(s, x), x) = true;\\
+\hspace*{5mm} [A1] getDescription(newLocation(newdesc, newp)) = newdesc;\\
+\hspace*{5mm} [A2] getPoint(newLocation(newdesc, newp)) = newp;\\
+\hspace*{5mm} [A3] setDescription(newDesc, newLocation(newdesc, newp)) = STUCK HERE;\\
 \hspace*{5mm} [A4] add(add(s, x), y) = add(add(s, y), x);\\
 
 
