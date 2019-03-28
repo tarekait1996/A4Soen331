@@ -25,9 +25,9 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Description}: A location contains a description \\
 \noindent \textbf{Operations}:\\
 \hspace*{5mm} newLocation: String $\times$ Point $\rightarrow$ Location;\\
-\hspace*{5mm} setDescription: description $\rightarrow$ Location;\\
+\hspace*{5mm} setDescription: description $\times$ Location $\rightarrow$ Location;\\
 \hspace*{5mm} getDescription : Location $\rightarrow$ Description;\\
-\hspace*{5mm} setPoint : Point $\rightarrow$ Location;\\
+\hspace*{5mm} setPoint : Point $\times$ Location $\rightarrow$ Location;\\
 \hspace*{5mm} getPoint : Location $\rightarrow$ Point;\\
 \noindent \textbf{Variables}:\\
 \hspace*{5mm} description: String; point: Point;\\
@@ -40,6 +40,8 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A6] getPoint(setDescription(newDescription, newLocation(desc,p))) = newLocation(newDesc, p);\\
 \hspace*{5mm} [A7] setDescription(newDesc, newLocation(d,p)) = newLocation(newDesc, p);\\
 \hspace*{5mm} [A8] setDescription(getDescription(newLocation(d,p)), newLocation(d,p)) = d;\\
+\hspace*{5mm} [A9] setPoint(newPoint, newLocation(d,p)) = newLocation(d, newPoint);\\
+\hspace*{5mm} [A10] setPoint(getPoint(newLocation(d,p)), newLocation(d,p)) = p;\\
 
 
 
