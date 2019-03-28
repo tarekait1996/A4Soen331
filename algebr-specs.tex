@@ -25,12 +25,12 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Description}: A location contains a description \\
 \noindent \textbf{Operations}:\\
 \hspace*{5mm} newLocation: String $\times$ Point $\rightarrow$ Location;\\
-\hspace*{5mm} setDescription: description $\times$ Location $\rightarrow$ Location;\\
-\hspace*{5mm} getDescription : Location $\rightarrow$ Description;\\
+\hspace*{5mm} setDescription: String $\times$ Location $\rightarrow$ Location;\\
+\hspace*{5mm} getDescription : Location $\rightarrow$ String;\\
 \hspace*{5mm} setPoint : Point $\times$ Location $\rightarrow$ Location;\\
 \hspace*{5mm} getPoint : Location $\rightarrow$ Point;\\
 \noindent \textbf{Variables}:\\
-\hspace*{5mm} description: String; point: Point;\\
+\hspace*{5mm} newDesc, desc, d: String; newPoint, p: Point;\\
 \noindent \textbf{Axioms}:\\
 \hspace*{5mm} [A1] getDescription(newLocation(newdesc, newp)) = newdesc;\\
 \hspace*{5mm} [A2] getDescription(setDescription(newDesc, newLocation(desc,p))) = newDesc;\\
