@@ -43,8 +43,31 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A9] setPoint(newPoint, newLocation(d,p)) = newLocation(d, newPoint);\\
 \hspace*{5mm} [A10] setPoint(getPoint(newLocation(d,p)), newLocation(d,p)) = newLocation(d, p);\\
 
-
-
+\noindent \textbf{Spec}: Map;\\
+\noindent \textbf{Sort}: Map;\\
+\noindent \textbf{Imports}: String, Point, Location;\\
+\noindent \textbf{Description}: A map contains locations\\
+\noindent \textbf{Operations}:\\
+\hspace*{5mm} newmap $\rightarrow$ Map;\\
+\hspace*{5mm} addlocation: Map $\times$ Location $\rightarrow$ Map;\\
+\hspace*{5mm} removelocation : Map $\times$ Description $\rightarrow$ Map;\\
+\hspace*{5mm} containsdescription : Map $\times$ Description $\rightarrow$ Boolean;\\
+\hspace*{5mm} containspoint : Map $\times$ Point  $\rightarrow$ Boolean;\\
+\hspace*{5mm} findlocation : Map $\times$ Description  $\rightarrow$ Point;\\
+\hspace*{5mm} isempty : Map $\rightarrow$ Boolean;\\
+\hspace*{5mm} clear : Map $\rightarrow$ Map;\\
+\noindent \textbf{Variables}:\\
+\hspace*{5mm} d: String; p: Point; loc: Location; map: Map\\
+\noindent \textbf{Axioms}:\\
+\hspace*{5mm} [A1] isempty(newmap) = true;\\
+\hspace*{5mm} [A2] isempty(clear(map)) = true;\\
+\hspace*{5mm} [A3] \\
+\hspace*{5mm} [A4] \\
+\hspace*{5mm} [A5] \\
+\hspace*{5mm} [A6] \\
+\hspace*{5mm} [A7] \\
+\hspace*{5mm} [A8] findlocation(newmap) = undefined;\\
+\hspace*{5mm} [A9] deletelocation(newmap) = undefined;\\
 
 \end{spacing}
 \end{document}
