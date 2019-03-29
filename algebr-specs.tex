@@ -43,17 +43,17 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A9] setPoint(newPoint, newLocation(d,p)) = newLocation(d, newPoint);\\
 \hspace*{5mm} [A10] setPoint(getPoint(newLocation(d,p)), newLocation(d,p)) = newLocation(d, p);\\
 
-\noindent \textbf{Spec}: Map;\\
+\noindent \textbf{Spec}: Map(Location);\\
 \noindent \textbf{Sort}: Map;\\
-\noindent \textbf{Imports}: String, Point, Location;\\
+\noindent \textbf{Imports}: String, Point, Boolean, Location;\\
 \noindent \textbf{Description}: A map contains locations\\
 \noindent \textbf{Operations}:\\
 \hspace*{5mm} newmap $\rightarrow$ Map;\\
 \hspace*{5mm} addlocation: Map $\times$ Location $\rightarrow$ Map;\\
-\hspace*{5mm} removelocation : Map $\times$ Description $\rightarrow$ Map;\\
-\hspace*{5mm} containsdescription : Map $\times$ Description $\rightarrow$ Boolean;\\
+\hspace*{5mm} deletelocation : Map $\times$ String $\rightarrow$ Map;\\
+\hspace*{5mm} containsdescription : Map $\times$ String $\rightarrow$ Boolean;\\
 \hspace*{5mm} containspoint : Map $\times$ Point  $\rightarrow$ Boolean;\\
-\hspace*{5mm} findlocation : Map $\times$ Description  $\rightarrow$ Point;\\
+\hspace*{5mm} findlocation : Map $\times$ String  $\rightarrow$ Point;\\
 \hspace*{5mm} isempty : Map $\rightarrow$ Boolean;\\
 \hspace*{5mm} clear : Map $\rightarrow$ Map;\\
 \noindent \textbf{Variables}:\\
