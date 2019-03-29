@@ -60,14 +60,15 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} d: String; p: Point; loc: Location; map: Map\\
 \noindent \textbf{Axioms}:\\
 \hspace*{5mm} [A1] isempty(newmap) = true;\\
-\hspace*{5mm} [A2] isempty(clear(map)) = true;\\
-\hspace*{5mm} [A3] \\
+\hspace*{5mm} [A2] isempty(addlocation(newmap, loc)) = false;\\
+\hspace*{5mm} [A3] isempty(clear(map)) = true;\\
 \hspace*{5mm} [A4] \\
 \hspace*{5mm} [A5] \\
 \hspace*{5mm} [A6] \\
 \hspace*{5mm} [A7] \\
-\hspace*{5mm} [A8] findlocation(newmap) = undefined;\\
-\hspace*{5mm} [A9] deletelocation(newmap) = undefined;\\
+\hspace*{5mm} [A8] \\
+\hspace*{5mm} [A9] findlocation(newmap) = undefined;\\
+\hspace*{5mm} [A10] deletelocation(newmap) = undefined;\\
 
 \end{spacing}
 \end{document}
