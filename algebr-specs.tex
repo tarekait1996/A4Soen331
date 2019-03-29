@@ -48,7 +48,7 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Imports}: String, Point, Boolean, Location;\\
 \noindent \textbf{Description}: A map contains locations\\
 \noindent \textbf{Operations}:\\
-\hspace*{5mm} newmap $\rightarrow$ Map;\\
+\hspace*{5mm} newmap: $\rightarrow$ Map;\\
 \hspace*{5mm} addlocation: Map $\times$ Location $\rightarrow$ Map;\\
 \hspace*{5mm} deletelocation : Map $\times$ String $\rightarrow$ Map;\\
 \hspace*{5mm} containsdescription : Map $\times$ String $\rightarrow$ Boolean;\\
@@ -57,15 +57,15 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} isempty : Map $\rightarrow$ Boolean;\\
 \hspace*{5mm} clear : Map $\rightarrow$ Map;\\
 \noindent \textbf{Variables}:\\
-\hspace*{5mm} d: String; p: Point; loc: Location; map: Map\\
+\hspace*{5mm} d: String; p, q: Point; loc: Location; map: Map\\
 \noindent \textbf{Axioms}:\\
 \hspace*{5mm} [A1] isempty(newmap) = true;\\
-\hspace*{5mm} [A2] isempty(addlocation(newmap, loc)) = false;\\
-\hspace*{5mm} [A3] isempty(clear(map)) = true;\\
-\hspace*{5mm} [A4] \\
-\hspace*{5mm} [A5] \\
+\hspace*{5mm} [A2] isempty(clear(map)) = true;\\
+\hspace*{5mm} [A3] containsdescription(addlocation(map, loc), getDescription(loc)) = true;\\
+\hspace*{5mm} [A4] addlocation(map, newLocation(d,p)) and containdescription(map, d) and not(p == findlocation(map, d) $\rightarrow$ findlocation(map, getDescription(loc)) = p;\\
+\hspace*{5mm} [A5] deletelocation(addlocation(addlocation(newmap, newLocation(d, p)),newLocation(d,q)),d) $\rightarrow$ newmap\\
 \hspace*{5mm} [A6] \\
-\hspace*{5mm} [A7] \\
+\hspace*{5mm} [A7] findlocation(map, getDescription(loc)) = getPoint(loc)\\
 \hspace*{5mm} [A8] findlocation(newmap) = undefined;\\
 \hspace*{5mm} [A9] deletelocation(newmap) = undefined;\\
 
