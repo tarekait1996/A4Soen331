@@ -63,7 +63,7 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A2] isempty(clear(map)) = true;\\
 \hspace*{5mm} [A3] containsdescription(addlocation(map, loc), getDescription(loc)) = true;\\
 \hspace*{5mm} [A4] containsdescription(map,d) $\rightarrow$ findlocation(addlocation(map, newlocation(d,q)), d) == q \\
-\hspace*{5mm} [A5] deletelocation(addlocation(addlocation(newmap, newLocation(d, p)),newLocation(d,q)),d) $\rightarrow$ newmap\\
+\hspace*{5mm} [A5] deletelocation(addlocation(addlocation(newmap, newLocation(d, p)),newLocation(d,q)),d) = newmap\\
 \hspace*{5mm} [A6] \\
 \hspace*{5mm} [A7] findlocation(map, getDescription(loc)) = getPoint(loc)\\
 \hspace*{5mm} [A8] findlocation(newmap) = undefined;\\
