@@ -68,6 +68,10 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A7] findlocation(map, getDescription(loc)) = getPoint(loc)\\
 \hspace*{5mm} [A8] findlocation(newmap) = undefined;\\
 \hspace*{5mm} [A9] deletelocation(newmap) = undefined;\\
+\hspace*{5mm} \textbf{preconditions}:\\
+\hspace*{10mm} pre : deletelocation(map, d) = not isempty(map);\\
+\hspace*{10mm} pre : findlocation(map, d) = not isempty(map);\\
+\hspace*{5mm} \textbf{end}:\\
 
 \end{spacing}
 \end{document}
