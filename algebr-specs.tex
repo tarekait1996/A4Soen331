@@ -43,7 +43,7 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A9] setPoint(newPoint, newLocation(d,p)) = newLocation(d, newPoint);\\
 \hspace*{5mm} [A10] setPoint(getPoint(newLocation(d,p)), newLocation(d,p)) = newLocation(d, p);\\
 
-\noindent \textbf{Spec}: Map(Location);\\
+\noindent \textbf{Spec}: Map (Location);\\
 \noindent \textbf{Sort}: Map;\\
 \noindent \textbf{Imports}: String, Point, Boolean, Location;\\
 \noindent \textbf{Description}: A map contains locations\\
@@ -62,7 +62,7 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} [A1] isempty(newmap) = true;\\
 \hspace*{5mm} [A2] isempty(clear(map)) = true;\\
 \hspace*{5mm} [A3] containsdescription(addlocation(map, loc), getDescription(loc)) = true;\\
-\hspace*{5mm} [A4] addlocation(map, newLocation(d,p)) and containdescription(map, d) and not(p == findlocation(map, d) $\rightarrow$ findlocation(map, getDescription(loc)) = p;\\
+\hspace*{5mm} [A4] containsdescription(map,d) $\rightarrow$ containspoint(addlocation(map, newlocation(d,q),q)) \\
 \hspace*{5mm} [A5] deletelocation(addlocation(addlocation(newmap, newLocation(d, p)),newLocation(d,q)),d) $\rightarrow$ newmap\\
 \hspace*{5mm} [A6] \\
 \hspace*{5mm} [A7] findlocation(map, getDescription(loc)) = getPoint(loc)\\
