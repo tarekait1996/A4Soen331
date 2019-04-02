@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  29 MAR 2019 23:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 APR 2019 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,38 +337,56 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 22--45
+Underfull \hbox (badness 10000) in paragraph at lines 22--39
 
  []
 
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (33.91072pt too wide) in paragraph at lines 46--75
+
+! LaTeX Error: \mathbb allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...ace*{5mm} size : Map $\rightarrow$ \mathbb
+                                                  {N} \\
+? q
+OK, entering \batchmode...
+
+Overfull \hbox (33.91072pt too wide) in paragraph at lines 40--71
 |  \OT1/cmr/m/n/12 [A5] delete-lo-ca-tion(addlocation(addlocation(newmap, newLo
 -ca-tion(d, p)),newLocation(d,q)),d)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--75
+Overfull \hbox (22.12613pt too wide) in paragraph at lines 40--71
+|  \OT1/cmr/m/n/12 [A5] size (addlo-ca-tion(addLocation(map, newLo-ca-tion(d,q)
+), newLo-ca-tion(d,p))) = size(map) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--71
 
  []
 
-[2] [3] (./algebr-specs.aux) ) 
+ [2] [3] (./algebr-specs.aux) ) 
 Here is how much of TeX's memory you used:
  4397 strings out of 492649
  60567 string characters out of 6129622
- 134510 words of memory out of 5000000
+ 133510 words of memory out of 5000000
  8214 multiletter control sequences out of 15000+600000
  11490 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,32p,279b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb>
-Output written on algebr-specs.pdf (3 pages, 51774 bytes).
+</usr/local/texlive/2018/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb>
+Output written on algebr-specs.pdf (3 pages, 51688 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
