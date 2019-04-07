@@ -47,14 +47,16 @@ Assignment 4 on algebraic specifications}
 
 \noindent \textbf{Spec}: Map (Location);\\
 \noindent \textbf{Sort}: Map;\\
-\noindent \textbf{Imports}: String, Point, Boolean, Location,$\mathbb{N}$;\\
+\noindent \textbf{Imports}: Boolean, Location,$\mathbb{N}$;\\
 \noindent \textbf{Description}: A Map ADT contains a collection of locations.
 \begin{itemize}
 	\item newmap: Creates a new empty map.
 	\item addlocation (Location): Adds a new location on the map. A location whose description already exists in the map will override the corresponding location with a new
-	point.Returns updated Map.
+	point.
+Returns updated Map.
 	\item deletelocation (String): Deletes the location from the map that corresponds to
-	a given description. Returns updated map
+	a given description. Returns updated map
+
 	\item containsdescription (String): Determines whether the map contains the given
 	description. Returns true if a description is found, and it returns false otherwise.
 	\item containspoint (Point): Determines whether the map contains the given point.
