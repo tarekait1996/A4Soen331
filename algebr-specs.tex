@@ -22,7 +22,15 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Spec}: Location;\\
 \noindent \textbf{Sort}: Location;\\
 \noindent \textbf{Imports}:String, Point\\
-\noindent \textbf{Description}: A location contains a description \\
+\noindent \textbf{Description}: A location contains a point and a description.
+\begin{itemize}
+	\item newlocation (String, Point): Creates a new location with the given description and point.
+	\item setdescription (String): Modifies the description of a location, and returns the updated location.
+	\item getdescription: Returns the description of the location.
+	\item setpoint (Point): Modifies the point of the location, and returns the updated location.
+	\item getpoint: Returns the point of the location.
+\end{itemize}
+
 \noindent \textbf{Operations}:\\
 \hspace*{5mm} newlocation: String $\times$ Point $\rightarrow$ Location;\\
 \hspace*{5mm} setdescription: String $\times$ Location $\rightarrow$ Location;\\
@@ -40,7 +48,23 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Spec}: Map (Location);\\
 \noindent \textbf{Sort}: Map;\\
 \noindent \textbf{Imports}: String, Point, Boolean, Location,$\mathbb{N}$;\\
-\noindent \textbf{Description}: A map contains locations\\
+\noindent \textbf{Description}: A Map ADT contains a collection of locations.
+\begin{itemize}
+	\item newmap: Creates a new empty map.
+	\item addlocation (Location): Adds a new location on the map. A location whose description already exists in the map will override the corresponding location with a new
+	point.Returns updated Map.
+	\item deletelocation (String): Deletes the location from the map that corresponds to
+	a given description. Returns updated map
+	\item containsdescription (String): Determines whether the map contains the given
+	description. Returns true if a description is found, and it returns false otherwise.
+	\item containspoint (Point): Determines whether the map contains the given point.
+	Returns true if a description is found, and it returns false otherwise.
+	\item findlocation (String): Returns the point for the location on the map that corresponds to the given description.
+	\item isempty: Determines whether the map is empty of annotations. Returns true if the
+	map contains no annotations and it returns false otherwise.
+	\item clear: Erases all locations from a map.
+	\item size: Returns the number of annotations in the map.	
+\end{itemize}
 \noindent \textbf{Operations}:\\
 \hspace*{5mm} newmap: $\rightarrow$ Map;\\
 \hspace*{5mm} addlocation: Map $\times$ Location $\rightarrow$ Map;\\
