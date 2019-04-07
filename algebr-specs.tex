@@ -24,22 +24,22 @@ Assignment 4 on algebraic specifications}
 \noindent \textbf{Imports}:String, Point\\
 \noindent \textbf{Description}: A location contains a description \\
 \noindent \textbf{Operations}:\\
-\hspace*{5mm} newLocation: String $\times$ Point $\rightarrow$ Location;\\
-\hspace*{5mm} setDescription: String $\times$ Location $\rightarrow$ Location;\\
-\hspace*{5mm} getDescription : Location $\rightarrow$ String;\\
-\hspace*{5mm} setPoint : Point $\times$ Location $\rightarrow$ Location;\\
-\hspace*{5mm} getPoint : Location $\rightarrow$ Point;\\
+\hspace*{5mm} newlocation: String $\times$ Point $\rightarrow$ Location;\\
+\hspace*{5mm} setdescription: String $\times$ Location $\rightarrow$ Location;\\
+\hspace*{5mm} getdescription : Location $\rightarrow$ String;\\
+\hspace*{5mm} setpoint : Point $\times$ Location $\rightarrow$ Location;\\
+\hspace*{5mm} getpoint : Location $\rightarrow$ Point;\\
 \noindent \textbf{Variables}:\\
 \hspace*{5mm} newDesc, d: String; newPoint, p: Point;\\
 \noindent \textbf{Axioms}:\\
-\hspace*{5mm} [A1] getDescription(newLocation(d, p)) = d;\\
-\hspace*{5mm} [A2] getPoint(newLocation(d, p)) = p;\\
-\hspace*{5mm} [A3] setDescription(newDesc, newLocation(d,p)) = newLocation(newDesc, p);\\
-\hspace*{5mm} [A4] setPoint(newPoint, newLocation(d,p)) = newLocation(d, newPoint);\\
+\hspace*{5mm} [A1] getdescription(newlocation(d, p)) = d;\\
+\hspace*{5mm} [A2] getpoint(newlocation(d, p)) = p;\\
+\hspace*{5mm} [A3] setdescription(newDesc, newlocation(d,p)) = newlocation(newDesc, p);\\
+\hspace*{5mm} [A4] setpoint(newPoint, newlocation(d,p)) = newlocation(d, newPoint);\\
 
 \noindent \textbf{Spec}: Map (Location);\\
 \noindent \textbf{Sort}: Map;\\
-\noindent \textbf{Imports}: String, Point, Boolean, Location;\\
+\noindent \textbf{Imports}: String, Point, Boolean, Location,$\mathbb{N}$;\\
 \noindent \textbf{Description}: A map contains locations\\
 \noindent \textbf{Operations}:\\
 \hspace*{5mm} newmap: $\rightarrow$ Map;\\
@@ -50,24 +50,21 @@ Assignment 4 on algebraic specifications}
 \hspace*{5mm} findlocation : Map $\times$ String  $\rightarrow$ Point;\\
 \hspace*{5mm} isempty : Map $\rightarrow$ Boolean;\\
 \hspace*{5mm} clear : Map $\rightarrow$ Map;\\
-\hspace*{5mm} size : Map $\rightarrow$ \mathbb{N} \\
+\hspace*{5mm} size : Map $\rightarrow$ $\mathbb{N}$ \\
 \noindent \textbf{Variables}:\\
 \hspace*{5mm} d: String; p, q: Point; loc: Location; map: Map\\
 \noindent \textbf{Axioms}:\\
 \hspace*{5mm} [A1] isempty(newmap) = true;\\
 \hspace*{5mm} [A2] isempty(clear(map)) = true;\\
-\hspace*{5mm} [A3] containsdescription(addlocation(map, loc), getDescription(loc)) = true;\\
+\hspace*{5mm} [A3] containsdescription(addlocation(map, new), getdescription(loc)) = true;\\
 \hspace*{5mm} [A4] containsdescription(map,d) $\rightarrow$ findlocation(addlocation(map, newlocation(d,q)), d) == q \\
-\hspace*{5mm} [A5] deletelocation(addlocation(addlocation(newmap, newLocation(d, p)),newLocation(d,q)),d) = newmap\\
-\hspace*{5mm} [A5] size (addlocation(addLocation(map, newLocation(d,q)), newLocation(d,p))) = size(map)\\
+\hspace*{5mm} [A5] size (addLocation(map, newlocation(d,q))) = \textbf{if} (containsdescription(map, d)) \textbf{then} size(map) \textbf{else} size(map) + 1\\
 \hspace*{5mm} [A6] isempty(deleteLocation(addlocation(newmap, newlocation(d,p)), d)) = true \\
-\hspace*{5mm} [A7] findlocation(addlocation(newmap, newlocation(d,p)), d) = p\\
-\hspace*{5mm} [A8] findlocation(newmap) = undefined;\\
-\hspace*{5mm} [A9] deletelocation(newmap) = undefined;\\
+\hspace*{5mm} [A7] findlocation(addlocation(map, newlocation(d,p)), d) = p\\
+\hspace*{5mm} [A8] findlocation(newmap, d) = undefined;\\
+\hspace*{5mm} [A9] deletelocation(newmap, d) = undefined;\\
 \hspace*{5mm} \textbf{preconditions}:\\
-\hspace*{10mm} pre : deletelocation(map, d) = not isempty(map);\\
-\hspace*{10mm} pre : findlocation(map, d) = not isempty(map);\\
-\hspace*{5mm} \textbf{end}:\\
-
+\hspace*{10mm} \textbf{pre} : deletelocation(map: Map, d: String) = containsdescription (map, d);\\
+\hspace*{10mm} \textbf{pre} : findlocation(map: Map, d: String) = containsdescription (map, d);\\
 \end{spacing}
 \end{document}
