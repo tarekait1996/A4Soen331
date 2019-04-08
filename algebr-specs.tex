@@ -21,7 +21,7 @@ Assignment 4 on algebraic specifications}
 
 \noindent \textbf{Spec}: Location;\\
 \noindent \textbf{Sort}: Location;\\
-\noindent \textbf{Imports}:String, Point\\
+\noindent \textbf{Imports}: String, Point\\
 \noindent \textbf{Description}: A location contains a point and a description.
 \begin{itemize}
 	\item newlocation (String, Point): Creates a new location with the given description and point.
@@ -47,7 +47,7 @@ Assignment 4 on algebraic specifications}
 \newpage
 \noindent \textbf{Spec}: Map (Location);\\
 \noindent \textbf{Sort}: Map;\\
-\noindent \textbf{Imports}: Boolean, Location,$\mathbb{N}$, Point, String;\\
+\noindent \textbf{Imports}: Boolean, Location, $\mathbb{N}$, Point, String;\\
 \noindent \textbf{Description}: A Map ADT contains a collection of locations.
 \begin{itemize}
 	\item newmap: Creates a new empty map.
@@ -82,9 +82,9 @@ Returns updated Map.
 \noindent \textbf{Axioms}:\\
 \hspace*{5mm} [A1] isempty(newmap) = true;\\
 \hspace*{5mm} [A2] isempty(clear(map)) = true;\\
-\hspace*{5mm} [A3] containsdescription(addlocation(map, new), getdescription(loc)) = true;\\
+\hspace*{5mm} [A3] containsdescription(addlocation(map, loc), getdescription(loc)) = true;\\
 \hspace*{5mm} [A4] containsdescription(map,d) $\rightarrow$ findlocation(addlocation(map, newlocation(d,q)), d) \hspace*{15mm} = q \\
-\hspace*{5mm} [A5] size (addLocation(map, newlocation(d,q))) = \\ \hspace*{15mm} \textbf{if} (containsdescription(map, d)) \\ \hspace*{25mm}\textbf{then} size(map) \\ \hspace*{15mm} \textbf{else} size(map) + 1\\
+\hspace*{5mm} [A5] size(addLocation(map, newlocation(d,q))) = \\ \hspace*{15mm} \textbf{if} (containsdescription(map, d)) \\ \hspace*{25mm}\textbf{then} size(map) \\ \hspace*{15mm} \textbf{else} size(map) + 1\\
 \hspace*{5mm} [A6] isempty(deleteLocation(addlocation(newmap, newlocation(d,p)), d)) = true \\
 \hspace*{5mm} [A7] findlocation(addlocation(map, newlocation(d,p)), d) = p\\
 \hspace*{5mm} [A8] findlocation(newmap, d) = undefined;\\
