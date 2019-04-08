@@ -83,7 +83,7 @@ Returns updated Map.
 \hspace*{5mm} [A1] isempty(newmap) = true;\\
 \hspace*{5mm} [A2] isempty(clear(map)) = true;\\
 \hspace*{5mm} [A3] containsdescription(addlocation(map, new), getdescription(loc)) = true;\\
-\hspace*{5mm} [A4] containsdescription(map,d) $\rightarrow$ findlocation(addlocation(map, newlocation(d,q)), d) \hspace*{15mm} == q \\
+\hspace*{5mm} [A4] containsdescription(map,d) $\rightarrow$ findlocation(addlocation(map, newlocation(d,q)), d) \hspace*{15mm} = q \\
 \hspace*{5mm} [A5] size (addLocation(map, newlocation(d,q))) = \\ \hspace*{15mm} \textbf{if} (containsdescription(map, d)) \\ \hspace*{25mm}\textbf{then} size(map) \\ \hspace*{15mm} \textbf{else} size(map) + 1\\
 \hspace*{5mm} [A6] isempty(deleteLocation(addlocation(newmap, newlocation(d,p)), d)) = true \\
 \hspace*{5mm} [A7] findlocation(addlocation(map, newlocation(d,p)), d) = p\\
